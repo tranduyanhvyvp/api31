@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "target": "ES5",
+    "lib": ["ESNext", "DOM"],
+    "module": "commonjs",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "rootDir": "src"
+  },
+  "include": ["src"]
+}
