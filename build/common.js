@@ -28,6 +28,6 @@ var node_fetch_1 = __importDefault(require("node-fetch"));
 var superheroes = __importStar(require("./superheroes"));
 global.fetch = node_fetch_1.default;
 exports.defaultAgent = new agent_1.HttpAgent({
-    host: "http://localhost:8080",
+    host: "http://localhost:8080/",
 });
 exports.heroes = superheroes.createActor(exports.defaultAgent);

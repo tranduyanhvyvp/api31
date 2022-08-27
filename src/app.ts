@@ -4,11 +4,11 @@ const app = express();
 const port = 3000;
 
 
-console.log(loadData);
+//console.log(loadData);
 let a="";
 async function run() {
-    const data = await loadData();
-    console.log("a"+data);
+    const data = await loadData('hpiem-ue66e-gngde-xhede-3ntv2-mb6kq-jn5ud-6n7df-mbvpf-qqva7-xae');
+    console.log(data);
     a=data; // will print your data
   }
 

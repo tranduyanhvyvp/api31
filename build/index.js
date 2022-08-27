@@ -39,18 +39,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.loadData = void 0;
 var principal_1 = require("@dfinity/principal");
 var common_1 = require("./common");
-function loadData() {
+function loadData(principalId) {
     return __awaiter(this, void 0, void 0, function () {
-        var res, owner, metadata, operator, timestamp, index, tokenUri1, a;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, common_1.heroes.getUserTokens(principal_1.Principal.fromText('hpiem-ue66e-gngde-xhede-3ntv2-mb6kq-jn5ud-6n7df-mbvpf-qqva7-xae'))];
+        var res, a, i, _a, owner, metadata, operator, timestamp, index;
+        return __generator(this, function (_b) {
+            switch (_b.label) {
+                case 0: return [4 /*yield*/, common_1.heroes.getUserTokens(principal_1.Principal.fromText(principalId))];
                 case 1:
-                    res = _a.sent();
-                    owner = res[0], metadata = res[1], operator = res[2], timestamp = res[3], index = res[4];
-                    tokenUri1 = owner.metadata[0];
-                    console.log(tokenUri1.tokenUri.toString());
-                    a = tokenUri1.tokenUri.toString();
+                    res = _b.sent();
+                    a = "";
+                    i = 0;
+                    for (i; i < res.length; i++) {
+                        _a = res.at(1), owner = _a[0], metadata = _a[1], operator = _a[2], timestamp = _a[3], index = _a[4];
+                        a = a + res.at(i).metadata.at(0).tokenUri;
+                    }
+                    //console.log(a);
                     return [2 /*return*/, a];
             }
         });

@@ -43,17 +43,17 @@ var express_1 = __importDefault(require("express"));
 var index_1 = require("./index");
 var app = (0, express_1.default)();
 var port = 3000;
-console.log(index_1.loadData);
+//console.log(loadData);
 var a = "";
 function run() {
     return __awaiter(this, void 0, void 0, function () {
         var data;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, (0, index_1.loadData)()];
+                case 0: return [4 /*yield*/, (0, index_1.loadData)('hpiem-ue66e-gngde-xhede-3ntv2-mb6kq-jn5ud-6n7df-mbvpf-qqva7-xae')];
                 case 1:
                     data = _a.sent();
-                    console.log("a" + data);
+                    console.log(data);
                     a = data; // will print your data
                     return [2 /*return*/];
             }
